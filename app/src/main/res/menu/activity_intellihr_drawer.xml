@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_myinfo"
+            android:icon="@drawable/ic_account"
+            android:title="My Information" />
+
+        <item
+            android:id="@+id/nav_attendence"
+            android:icon="@drawable/ic_calendar"
+            android:title="Attendence" />
+
+        <item
+            android:id="@+id/nav_leave"
+            android:icon="@drawable/ic_account_box"
+            android:title="Leave" />
+
+        <item
+            android:id="@+id/nav_daily"
+            android:icon="@drawable/ic_account_box"
+            android:title="Daily Report" />
+
+        <item
+            android:id="@+id/nav_myTask"
+            android:icon="@drawable/ic_account_box"
+            android:title="My Task" />
+
+        <item
+            android:id="@+id/nav_companyPolicy"
+            android:icon="@drawable/policy"
+            android:title="Company Policy" />
+
+        <item
+            android:id="@+id/nav_followUs"
+            android:icon="@drawable/ic_share"
+            android:title="Follow Us" />
+
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_logout"
+            android:title="Logout" />
+
+    </group>
+
+</menu>

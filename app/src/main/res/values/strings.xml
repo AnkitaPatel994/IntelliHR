@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">IntelliHR</string>
+    <string name="title_activity_forgot_pass">Forgot Password</string>
+    <string name="title_activity_employee_info">My Information</string>
+    <string name="title_activity_attendence">Attendence</string>
+    <string name="title_activity_leave">Leave</string>
+    <string name="title_activity_applyleave">Apply Leave</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="txt_hint_username">Email</string>
+    <string name="txt_hint_password">Password</string>
+    <string name="txt_forgot_password">Forgot Password?</string>
+    <string name="btn_login">Login</string>
+    <string name="btn_for_pass">Submit</string>
+    <string name="err_msg_email">Please Enter Email.</string>
+    <string name="err_msg_email_valid">Please valid Email.</string>
+    <string name="err_msg_password">Please Enter Password.</string>
+
+    <string name="txt_hint_leave_reason">Leave Reason</string>
+    <string name="btn_apply">Apply</string>
+    
+    <string-array name="leaveType">
+        <item>Paid Leave</item>
+        <item>Casual Leave</item>
+        <item>Sick Leave</item>
+    </string-array>
+
+    <string-array name="leaveDayType">
+        <item>Full</item>
+        <item>Half</item>
+    </string-array>
+
 </resources>

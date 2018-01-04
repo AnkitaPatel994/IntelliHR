@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.ankita.intellihr.ApplyLeaveActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Spinner
+                android:id="@+id/spLeaveType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#111"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dialog"
+                android:entries="@array/leaveType"
+                android:layout_marginTop="5dp"
+                android:popupTheme="@android:style/ThemeOverlay.Material.Light"/>
+
+            <LinearLayout
+                android:id="@+id/llStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:background="@android:drawable/editbox_background">
+
+                <TextView
+                    android:id="@+id/txtStartDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_calendar"
+                    android:layout_weight="9"/>
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spLeaveDayTypeStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#111"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dialog"
+                android:layout_marginTop="5dp"
+                android:entries="@array/leaveDayType"
+                android:popupTheme="@android:style/ThemeOverlay.Material.Light"/>
+
+            <LinearLayout
+                android:id="@+id/llEndDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="15dp"
+                android:background="@android:drawable/editbox_background">
+
+                <TextView
+                    android:id="@+id/txtEndDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TextView"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_calendar"
+                    android:layout_weight="9"/>
+
+            </LinearLayout>
+
+            <Spinner
+                android:id="@+id/spLeaveDayTypeEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#111"
+                android:background="@android:drawable/btn_dropdown"
+                android:spinnerMode="dialog"
+                android:entries="@array/leaveDayType"
+                android:layout_marginTop="5dp"
+                android:popupTheme="@android:style/ThemeOverlay.Material.Light"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_leave_reason"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <EditText
+                    android:id="@+id/txtLeaveReason"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="@string/txt_hint_leave_reason"
+                    android:inputType="textEmailAddress"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <Button
+                android:id="@+id/btnApply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/button_bg"
+                android:textColor="@color/colorWhite"
+                android:text="@string/btn_apply" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -2,6 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.ankita.intellihr">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,6 +21,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".ForgotPassActivity" />
+        <activity
+            android:name=".EmployeeInfoActivity"
+            android:label="@string/title_activity_employee_info"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AttendenceActivity"
+            android:label="@string/title_activity_attendence"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".LeaveActivity"
+            android:label="@string/title_activity_leave"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ApplyLeaveActivity"></activity>
     </application>
 
 </manifest>
