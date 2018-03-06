@@ -3,8 +3,6 @@ package com.ankita.intellihr;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,6 +17,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.text.DateFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -146,9 +145,17 @@ public class AttendenceActivity extends AppCompatActivity
             startActivity(i);
             finish();
         }
+        else if (id == R.id.nav_daily)
+        {
+            Intent i = new Intent(getApplicationContext(),DailyReportActivity.class);
+            startActivity(i);
+            finish();
+        }
         else if (id == R.id.nav_logout)
         {
-
+            Intent i = new Intent(getApplicationContext(),LoginActivity.class);
+            startActivity(i);
+            finish();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -213,10 +220,28 @@ public class AttendenceActivity extends AppCompatActivity
         @Override
         protected String doInBackground(String... strings) {
 
-            paidLeaveList.add("4/12/2017");
-            paidLeaveList.add("5/12/2017");
 
-            holidayList.add("25/12/2017");
+
+            try {
+                String d= "02/03/2018";
+                SimpleDateFormat fmtt = new SimpleDateFormat("d/M/yyyy");
+                Date da = fmtt.parse(d);
+                absentList.add(fmtt.format(da));
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+
+            absentList.add("02/02/2018");
+
+            holidayList.add("13/2/2018");
+
+            helfLeaveList.add("22/2/2018");
+
+            paidLeaveList.add("7/2/2018");
+
+            casualLeaveList.add("23/2/2018");
+
+            sickLeaveList.add("28/2/2018");
 
             return null;
         }

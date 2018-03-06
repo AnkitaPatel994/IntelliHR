@@ -35,7 +35,11 @@
             android:name=".LeaveActivity"
             android:label="@string/title_activity_leave"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".ApplyLeaveActivity"></activity>
+        <activity android:name=".ApplyLeaveActivity" />
+        <activity
+            android:name=".DailyReportActivity"
+            android:label="@string/title_activity_deily_report"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

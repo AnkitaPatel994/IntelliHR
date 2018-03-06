@@ -30,6 +30,11 @@
             android:title="My Task" />
 
         <item
+            android:id="@+id/nav_myTeam"
+            android:icon="@drawable/ic_team"
+            android:title="My Team" />
+
+        <item
             android:id="@+id/nav_companyPolicy"
             android:icon="@drawable/policy"
             android:title="Company Policy" />

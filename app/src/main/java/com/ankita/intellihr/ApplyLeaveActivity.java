@@ -112,7 +112,28 @@ public class ApplyLeaveActivity extends AppCompatActivity implements View.OnClic
                     SimpleDateFormat simpledateformat = new SimpleDateFormat("EEE");
                     Date date = new Date(startYear, startMonth, startDay-1);
                     String dayOfWeek = simpledateformat.format(date);
-                    txtStartDate.setText(dayOfWeek+", "+startDay + "/" + (startMonth + 1) + "/" + startYear);
+                    int smonth = startMonth + 1;
+                    String sm = null;
+                    if(smonth<10)
+                    {
+                        sm = "0" +smonth;
+                    }
+                    else
+                    {
+                        sm = String.valueOf(smonth);
+                    }
+
+                    String sd = null;
+                    if(startDay<10)
+                    {
+                        sd = "0" +startDay;
+                    }
+                    else
+                    {
+                        sd = String.valueOf(startDay);
+                    }
+
+                    txtStartDate.setText(dayOfWeek+", "+sd + "/" + sm + "/" + startYear);
                 }
             }, startYear, startMonth, startDay);
             datePickerDialog.getDatePicker().setMinDate(c.getTimeInMillis());
@@ -133,7 +154,29 @@ public class ApplyLeaveActivity extends AppCompatActivity implements View.OnClic
                     SimpleDateFormat simpledateformat = new SimpleDateFormat("EEE");
                     Date date = new Date(startYear, startMonth, startDay-1);
                     String dayOfWeek = simpledateformat.format(date);
-                    txtEndDate.setText(dayOfWeek+", "+startDay + "/" + (startMonth + 1) + "/" + startYear);
+
+                    int smonth = startMonth + 1;
+                    String sm = null;
+                    if(smonth<10)
+                    {
+                        sm = "0"+smonth;
+                    }
+                    else
+                    {
+                        sm = String.valueOf(smonth);
+                    }
+
+                    String sd = null;
+                    if(startDay<10)
+                    {
+                        sd = "0" +startDay;
+                    }
+                    else
+                    {
+                        sd = String.valueOf(startDay);
+                    }
+
+                    txtEndDate.setText(dayOfWeek+", "+ sd + "/" + sm + "/" + startYear);
                 }
             }, startYear, startMonth, startDay);
             datePickerDialog1.getDatePicker().setMinDate(c.getTimeInMillis());

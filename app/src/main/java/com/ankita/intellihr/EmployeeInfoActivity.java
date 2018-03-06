@@ -13,8 +13,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AlertDialog;
@@ -30,7 +28,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.ByteArrayOutputStream;
 import java.io.File;
@@ -283,6 +280,12 @@ public class EmployeeInfoActivity extends AppCompatActivity
         else if (id == R.id.nav_leave)
         {
             Intent i = new Intent(getApplicationContext(),LeaveActivity.class);
+            startActivity(i);
+            finish();
+        }
+        else if (id == R.id.nav_daily)
+        {
+            Intent i = new Intent(getApplicationContext(),DailyReportActivity.class);
             startActivity(i);
             finish();
         }
